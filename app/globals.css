@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  /* Light, editorial surface (Vitol-like) */
+  --background: #ffffff;
+  --surface: #f6f5f2; /* warm off-white */
+  --foreground: #1a1a1a; /* never pure #000 per brief */
+  --muted: #5b5b57;
+  --line: #e4e2dc;
+  --brand: #14304a; /* deep petrol-navy accent */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Body: Inter 400, line-height 1.65 (brief) */
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* Display headings: Cormorant Garamond, 700, -0.02em tracking (brief) */
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* All-caps UI: Inter, uppercase, +0.15em tracking (brief) */
+.eyebrow,
+.nav__link,
+.btn {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Keep the brand light by default; dark mode is opt-in later.
+     For now we hold a light editorial palette regardless of OS setting. */
+}

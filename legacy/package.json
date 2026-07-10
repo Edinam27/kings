@@ -1,0 +1,11 @@
+{
+  "name": "kings-tier-petroleum",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kings Tier Petroleum — global energy & commodities trading marketing site. Static, zero-dependency.",
+  "scripts": {
+    "dev": "npx --yes serve . -l 8823",
+    "preview": "npx --yes serve . -l 8823",
+    "build": "node -e \"console.log('Static site — nothing to build. Site files live at the repo root.')\""
+  }
+}
