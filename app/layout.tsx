@@ -19,6 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://edinam27.github.io/kings"),
   title: "Kings Tier Petroleum — Global Energy & Commodities Trading",
   description:
     "Kings Tier Petroleum sources, moves and delivers crude, refined fuels, LNG and power across every continent — safely and responsibly.",

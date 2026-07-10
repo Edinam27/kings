@@ -145,6 +145,7 @@ export const footerColumns: { title: string; links: { label: string; href: strin
       { label: "About us", href: "/about" },
       { label: "What we do", href: "/what-we-do" },
       { label: "Sustainability", href: "/sustainability" },
+      { label: "Media", href: "/media" },
       { label: "Careers", href: "/careers" },
     ],
   },
