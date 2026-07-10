@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Content Security Policy (meta fallback — GitHub Pages can't send HTTP headers).
+       frame-ancestors / X-Frame-Options / HSTS are header-only; add them at a CDN/proxy for full coverage. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self' mailto:; frame-src 'none'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Kings Tier Petroleum — Global Energy &amp; Commodities Trading</title>
+  <meta name="description" content="Kings Tier Petroleum is a global energy and commodities trading company. We source, move and deliver crude, refined fuels, LNG and power — safely and responsibly, across every continent." />
+  <meta name="theme-color" content="#0b0f16" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kings Tier Petroleum — Global Energy &amp; Commodities Trading" />
+  <meta property="og:description" content="Sourcing, moving and delivering energy across every continent — with integrity, logistical depth and disciplined risk management." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Kings Tier Petroleum home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 3 L34 11 V29 L20 37 L6 29 V11 Z" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.55"/>
+            <path d="M20 10 l7 4 v8 l-7 4 -7-4 v-8 z" fill="currentColor" opacity="0.9"/>
+            <path d="M20 15 l3 1.7 v3.4 l-3 1.7 -3-1.7 v-3.4 z" fill="var(--ink-900)"/>
+          </svg>
+        </span>
+        <span>Kings Tier<small>Petroleum Trading Co.</small></span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#trade">What we trade</a></li>
+        <li><a href="#reach">Global reach</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#responsibility">Responsibility</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a class="btn" href="#contact" data-magnetic>Contact desk <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ===================== Hero ===================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/img/oil-rig.jpg" aria-hidden="true">
+        <source src="assets/video/oil-rig.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="flow" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="oklch(74% 0.13 80)" stop-opacity="0.0"/>
+              <stop offset="0.5" stop-color="oklch(74% 0.13 80)" stop-opacity="0.5"/>
+              <stop offset="1" stop-color="oklch(74% 0.13 80)" stop-opacity="0.0"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#flow)" stroke-width="1.1">
+            <path d="M-100 200 C 300 120, 500 380, 900 240 S 1400 180, 1400 180"/>
+            <path d="M-100 320 C 300 260, 520 520, 940 360 S 1400 300, 1400 300"/>
+            <path d="M-100 440 C 320 380, 560 640, 980 480 S 1400 420, 1400 420"/>
+            <path d="M-100 560 C 340 500, 600 760, 1020 600 S 1400 540, 1400 540"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__inner wrap">
+        <p class="eyebrow" data-reveal>Global energy &amp; commodities trading</p>
+        <h1 class="display hero__title" id="hero-heading" data-reveal data-reveal-delay="80">
+          Energy, delivered with <span class="accent">integrity</span>.
+        </h1>
+        <p class="hero__sub" data-reveal data-reveal-delay="160">
+          Kings Tier Petroleum sources, moves and delivers crude, refined fuels, LNG
+          and power across every continent — pairing deep logistical infrastructure
+          with disciplined risk management our counterparties trust.
+        </p>
+        <div class="hero__cta" data-reveal data-reveal-delay="240">
+          <a class="btn" href="#trade" data-magnetic>Explore our markets <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#reach">See our global reach</a>
+        </div>
+
+        <div class="hero-stats" data-reveal data-reveal-delay="320">
+          <div class="hero-stats__cell">
+            <div class="hero-stats__num"><span data-count="40" data-prefix="">40</span><span class="unit">+</span></div>
+            <div class="hero-stats__label">Global trading offices</div>
+          </div>
+          <div class="hero-stats__cell">
+            <div class="hero-stats__num"><span data-count="6">6</span></div>
+            <div class="hero-stats__label">Continents served</div>
+          </div>
+          <div class="hero-stats__cell">
+            <div class="hero-stats__num"><span data-count="1.2">1.2</span><span class="unit">M b/d</span></div>
+            <div class="hero-stats__label">Traded &amp; distributed</div>
+          </div>
+          <div class="hero-stats__cell">
+            <div class="hero-stats__num"><span data-count="25">25</span><span class="unit">yrs</span></div>
+            <div class="hero-stats__label">Of market presence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Marquee ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Crude Oil</span>
+        <span class="marquee__item">Refined Products</span>
+        <span class="marquee__item">LNG</span>
+        <span class="marquee__item">LPG</span>
+        <span class="marquee__item">Marine Bunkers</span>
+        <span class="marquee__item">Jet Fuel</span>
+        <span class="marquee__item">Gasoil</span>
+        <span class="marquee__item">Power</span>
+        <span class="marquee__item">Naphtha</span>
+        <span class="marquee__item">Carbon</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee__item">Crude Oil</span>
+        <span class="marquee__item">Refined Products</span>
+        <span class="marquee__item">LNG</span>
+        <span class="marquee__item">LPG</span>
+        <span class="marquee__item">Marine Bunkers</span>
+        <span class="marquee__item">Jet Fuel</span>
+        <span class="marquee__item">Gasoil</span>
+        <span class="marquee__item">Power</span>
+        <span class="marquee__item">Naphtha</span>
+        <span class="marquee__item">Carbon</span>
+      </div>
+    </div>
+
+    <!-- ===================== Statement / pillars ===================== -->
+    <section class="section wrap statement" aria-labelledby="statement-heading">
+      <p class="statement__text display" id="statement-heading" data-reveal>
+        <span class="gold">Every day,</span> we connect the world&rsquo;s producers and
+        consumers of energy — <span class="muted">turning logistical complexity into
+        reliable supply, safely and responsibly.</span>
+      </p>
+
+      <div class="statement__grid">
+        <article class="pillar" data-reveal>
+          <div class="pillar__k">01 — Trust</div>
+          <h3>Counterparty confidence</h3>
+          <p>Transparent dealing, dependable settlement and long-term relationships built over decades across volatile markets.</p>
+        </article>
+        <article class="pillar" data-reveal data-reveal-delay="120">
+          <div class="pillar__k">02 — Infrastructure</div>
+          <h3>Physical reach</h3>
+          <p>Storage, terminals, chartered tonnage and blending capability that let us move barrels where and when they are needed.</p>
+        </article>
+        <article class="pillar" data-reveal data-reveal-delay="240">
+          <div class="pillar__k">03 — Discipline</div>
+          <h3>Managed risk</h3>
+          <p>A structured approach to price, credit and operational risk — so exposure is always deliberate, never accidental.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Segments ===================== -->
+    <section class="section wrap" id="trade" aria-labelledby="trade-heading">
+      <div class="section-head">
+        <h2 class="display section-head__title" id="trade-heading" data-reveal>What we trade &amp; move</h2>
+        <p class="section-head__aside" data-reveal data-reveal-delay="120">
+          A diversified portfolio across the hydrocarbon value chain and the energy
+          transition — each desk backed by dedicated operations and analytics.
+        </p>
+      </div>
+
+      <div class="segments">
+        <article class="seg" data-reveal>
+          <span class="seg__num">01</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c3 4 6 7 6 11a6 6 0 1 1-12 0c0-4 3-7 6-11z"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>Crude Oil</h3>
+            <p>Sour and sweet grades sourced at the wellhead and traded into refineries worldwide.</p>
+          </div>
+        </article>
+
+        <article class="seg" data-reveal data-reveal-delay="80">
+          <span class="seg__num">02</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>Refined Products</h3>
+            <p>Gasoil, gasoline, jet, naphtha and fuel oil blended and delivered to spec.</p>
+          </div>
+        </article>
+
+        <article class="seg" data-reveal data-reveal-delay="160">
+          <span class="seg__num">03</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>LNG &amp; Natural Gas</h3>
+            <p>Flexible cargoes and pipeline volumes connecting supply hubs to growing demand.</p>
+          </div>
+        </article>
+
+        <article class="seg" data-reveal>
+          <span class="seg__num">04</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17h18l-2 3H5z"/><path d="M6 17V8h9l3 5"/><circle cx="8" cy="9" r="0.6" fill="currentColor"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>Marine Bunkering</h3>
+            <p>Physical supply and quality assurance for the world&rsquo;s shipping fleets in key ports.</p>
+          </div>
+        </article>
+
+        <article class="seg" data-reveal data-reveal-delay="80">
+          <span class="seg__num">05</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>Power &amp; Renewables</h3>
+            <p>Electricity, gas-fired generation and sustainable energy solutions for the transition.</p>
+          </div>
+        </article>
+
+        <article class="seg" data-reveal data-reveal-delay="160">
+          <span class="seg__num">06</span>
+          <div class="seg__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
+          </div>
+          <div class="seg__body">
+            <h3>Risk &amp; Structured Trade</h3>
+            <p>Hedging, financing and structured solutions engineered around real-world exposures.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Global reach ===================== -->
+    <section class="section reach" id="reach" aria-labelledby="reach-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="display section-head__title" id="reach-heading" data-reveal>Operating on every continent</h2>
+          <p class="section-head__aside" data-reveal data-reveal-delay="120">
+            From over 40 offices and a network of terminals and chartered tonnage, we
+            keep energy moving between the markets that produce it and the markets that need it.
+          </p>
+        </div>
+
+        <div class="reach__layout">
+          <div class="reach__figures">
+            <div class="reach-stat" data-reveal>
+              <div class="reach-stat__num"><span data-count="40">40</span><span class="unit">+</span></div>
+              <div class="reach-stat__label">Offices across the Americas, EMEA and APAC</div>
+            </div>
+            <div class="reach-stat" data-reveal data-reveal-delay="100">
+              <div class="reach-stat__num"><span data-count="180">180</span><span class="unit">+</span></div>
+              <div class="reach-stat__label">Counterparties in over 90 countries</div>
+            </div>
+            <div class="reach-stat" data-reveal data-reveal-delay="200">
+              <div class="reach-stat__num"><span data-count="9.6">9.6</span><span class="unit">Mm&sup3;</span></div>
+              <div class="reach-stat__label">Owned &amp; contracted storage capacity</div>
+            </div>
+          </div>
+
+          <div class="map" data-reveal data-reveal-delay="120" role="img" aria-label="Stylised world map showing Kings Tier trading hubs">
+            <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid meet">
+              <g class="map__dots">
+                <!-- scattered network dots -->
+                <circle class="map__dot" cx="120" cy="150" r="1.6"/><circle class="map__dot" cx="150" cy="130" r="1.6"/>
+                <circle class="map__dot" cx="170" cy="170" r="1.6"/><circle class="map__dot" cx="200" cy="200" r="1.6"/>
+                <circle class="map__dot" cx="180" cy="250" r="1.6"/><circle class="map__dot" cx="300" cy="120" r="1.6"/>
+                <circle class="map__dot" cx="330" cy="150" r="1.6"/><circle class="map__dot" cx="315" cy="185" r="1.6"/>
+                <circle class="map__dot" cx="345" cy="220" r="1.6"/><circle class="map__dot" cx="360" cy="260" r="1.6"/>
+                <circle class="map__dot" cx="430" cy="140" r="1.6"/><circle class="map__dot" cx="470" cy="170" r="1.6"/>
+                <circle class="map__dot" cx="500" cy="200" r="1.6"/><circle class="map__dot" cx="520" cy="240" r="1.6"/>
+                <circle class="map__dot" cx="540" cy="150" r="1.6"/><circle class="map__dot" cx="250" cy="90" r="1.6"/>
+                <circle class="map__dot" cx="410" cy="110" r="1.6"/><circle class="map__dot" cx="480" cy="130" r="1.6"/>
+              </g>
+              <!-- trade routes -->
+              <g fill="none" stroke="var(--gold-500)" stroke-width="0.8" opacity="0.5">
+                <path d="M150 130 Q 260 60 330 150"/>
+                <path d="M330 150 Q 420 90 500 200"/>
+                <path d="M180 250 Q 300 300 345 220"/>
+              </g>
+              <!-- hubs with pulses -->
+              <g>
+                <circle class="map__pulse" cx="150" cy="130"/>
+                <circle class="map__hub" cx="150" cy="130" r="3.4"/>
+              </g>
+              <g>
+                <circle class="map__pulse" cx="330" cy="150"/>
+                <circle class="map__hub" cx="330" cy="150" r="3.4"/>
+              </g>
+              <g>
+                <circle class="map__pulse" cx="500" cy="200"/>
+                <circle class="map__hub" cx="500" cy="200" r="3.4"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Approach ===================== -->
+    <section class="section wrap approach" id="approach" aria-labelledby="approach-heading">
+      <div class="approach__layout">
+        <div class="approach__sticky">
+          <p class="eyebrow" data-reveal>How we operate</p>
+          <h2 class="display" id="approach-heading" data-reveal data-reveal-delay="100">
+            From wellhead to end user.
+          </h2>
+          <p class="lede" data-reveal data-reveal-delay="180">
+            A single, accountable chain of custody — engineered so every barrel and
+            molecule is sourced, moved, hedged and delivered with precision.
+          </p>
+        </div>
+
+        <div class="approach__steps">
+          <article class="step" data-reveal>
+            <div class="step__k">01</div>
+            <div>
+              <h3>Source</h3>
+              <p>We buy at the point of production, building direct relationships with producers and refiners to secure reliable, competitively priced supply.</p>
+            </div>
+          </article>
+          <article class="step" data-reveal data-reveal-delay="80">
+            <div class="step__k">02</div>
+            <div>
+              <h3>Move</h3>
+              <p>Chartered vessels, pipelines and a network of terminals let us position product across regions and arbitrage in real time.</p>
+            </div>
+          </article>
+          <article class="step" data-reveal data-reveal-delay="160">
+            <div class="step__k">03</div>
+            <div>
+              <h3>Manage risk</h3>
+              <p>Every position is measured and hedged. Price, credit and operational risk are governed by a disciplined, independent framework.</p>
+            </div>
+          </article>
+          <article class="step" data-reveal data-reveal-delay="240">
+            <div class="step__k">04</div>
+            <div>
+              <h3>Deliver</h3>
+              <p>Product arrives on-spec, on-time and to contract — backed by operations teams who own the outcome end to end.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Insights ===================== -->
+    <section class="section wrap" id="insights" aria-labelledby="insights-heading">
+      <div class="section-head">
+        <h2 class="display section-head__title" id="insights-heading" data-reveal>Market insights</h2>
+        <p class="section-head__aside" data-reveal data-reveal-delay="120">
+          Perspectives from our trading desks on the forces shaping global energy markets.
+        </p>
+      </div>
+
+      <div class="insights__grid">
+        <article class="card card--feature" data-reveal>
+          <div class="card__media">
+            <img class="card__img" src="assets/img/power-plant.jpg" alt="Power plant generating electricity at dusk" width="1200" height="600" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="tag">Power</span><span>7 min read</span></div>
+            <h3>What matters most in US power markets right now</h3>
+            <p>Rising electricity demand is reshaping how reliable supply is developed, fuelled and delivered — and where the real opportunities lie.</p>
+            <a class="link-arrow" href="insights/us-power-markets.html">Read the analysis <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="100">
+          <div class="card__media">
+            <img class="card__img" src="assets/img/industrial.jpg" alt="Industrial pipes and refinery infrastructure" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="tag">Carbon</span><span>5 min read</span></div>
+            <h3>Why carbon markets need a practical safety valve</h3>
+            <p>Balancing decarbonisation ambition with the stability industry needs to invest.</p>
+            <a class="link-arrow" href="insights/carbon-markets.html">Read more <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="200">
+          <div class="card__media">
+            <img class="card__img" src="assets/img/lng-tanker.jpg" alt="LNG carrier tanker docked at port" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="tag">LNG</span><span>6 min read</span></div>
+            <h3>Global LNG demand and the flexible cargo</h3>
+            <p>How optionality is becoming the most valuable asset in gas trading.</p>
+            <a class="link-arrow" href="insights/lng-flexible-cargo.html">Read more <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Responsibility (light band) ===================== -->
+    <section class="section responsibility" id="responsibility" aria-labelledby="resp-heading">
+      <div class="wrap responsibility__layout">
+        <div>
+          <p class="eyebrow" data-reveal>Responsibility</p>
+          <h2 class="display" id="resp-heading" data-reveal data-reveal-delay="100">
+            Energy delivered safely, and with the future in mind.
+          </h2>
+          <p data-reveal data-reveal-delay="180">
+            Our ESG framework sets out how we operate: rigorous safety, sound
+            governance and measurable investment in the energy transition. We expect
+            the companies we invest in to meet these standards too.
+          </p>
+          <p style="margin-top:1.6rem" data-reveal data-reveal-delay="240">
+            <a class="btn btn--ghost" href="esg.html">Read our ESG approach</a>
+          </p>
+        </div>
+
+        <div class="resp-metrics" data-reveal data-reveal-delay="160">
+          <div class="resp-metric">
+            <div class="resp-metric__num"><span data-count="1.4">1.4</span><span class="unit">GW</span></div>
+            <div class="resp-metric__label">Renewable capacity in development</div>
+          </div>
+          <div class="resp-metric">
+            <div class="resp-metric__num"><span data-count="0">0</span></div>
+            <div class="resp-metric__label">Tolerance for unsafe operations</div>
+          </div>
+          <div class="resp-metric">
+            <div class="resp-metric__num"><span data-count="100">100</span><span class="unit">%</span></div>
+            <div class="resp-metric__label">Counterparty compliance screening</div>
+          </div>
+          <div class="resp-metric">
+            <div class="resp-metric__num"><span data-count="2040">2040</span></div>
+            <div class="resp-metric__label">Net-zero operations target</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA / Careers ===================== -->
+    <section class="cta" id="careers" aria-labelledby="cta-heading">
+      <div class="cta__bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Careers</p>
+        <h2 class="display" id="cta-heading" data-reveal data-reveal-delay="100">A business on the move.</h2>
+        <p data-reveal data-reveal-delay="180">
+          Our people are our business. Join a team that turns global complexity into
+          reliable energy — and builds a career without a ceiling.
+        </p>
+        <div class="cta__actions" data-reveal data-reveal-delay="240">
+          <a class="btn" href="careers.html" data-magnetic>View open roles <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#contact">Talk to our team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="Kings Tier Petroleum home">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <path d="M20 3 L34 11 V29 L20 37 L6 29 V11 Z" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.55"/>
+                <path d="M20 10 l7 4 v8 l-7 4 -7-4 v-8 z" fill="currentColor" opacity="0.9"/>
+                <path d="M20 15 l3 1.7 v3.4 l-3 1.7 -3-1.7 v-3.4 z" fill="var(--ink-900)"/>
+              </svg>
+            </span>
+            <span>Kings Tier<small>Petroleum Trading Co.</small></span>
+          </a>
+          <p>A global energy and commodities trading company — sourcing, moving and delivering energy safely and responsibly around the world.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#top">About us</a></li>
+            <li><a href="#approach">Our approach</a></li>
+            <li><a href="#reach">Global reach</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Markets</h4>
+          <ul>
+            <li><a href="#trade">Crude &amp; products</a></li>
+            <li><a href="#trade">LNG &amp; gas</a></li>
+            <li><a href="#trade">Power &amp; renewables</a></li>
+            <li><a href="#trade">Marine bunkering</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__contact">
+          <h4>Contact desk</h4>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              <span class="field__error" data-error></span>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required />
+              <span class="field__error" data-error></span>
+            </div>
+            <div class="field">
+              <label for="cf-message">How can we help?</label>
+              <textarea id="cf-message" name="message" rows="3" required></textarea>
+              <span class="field__error" data-error></span>
+            </div>
+            <button class="btn" type="submit" data-magnetic>Send enquiry <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="contact-form__status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="footer__contact-meta">
+            <a href="mailto:trading@kingstier.example">trading@kingstier.example</a>
+            <a href="tel:+10000000000">+1 (000) 000&ndash;0000</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> Kings Tier Petroleum Trading Company. All rights reserved.</span>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="legal/privacy.html">Privacy</a>
+          <a href="legal/terms.html">Terms</a>
+          <a href="legal/modern-slavery.html">Modern slavery statement</a>
+          <a href="legal/ethics.html">Ethics &amp; compliance</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Secrets & local Claude config — contains a hardcoded ANTHROPIC_API_KEY.
+# NEVER commit this folder.
+.claude/
+
+# Scraped competitor references (Shell/Vitol) — not part of the built site.
+references/
+
+# Screenshot artifacts from QA passes.
+shots/
+
+# Dependencies (none currently, but be safe).
+node_modules/
+
+# OS cruft
+.DS_Store
+Thumbs.db

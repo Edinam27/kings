@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# ⚠ REPLACE "USERNAME" with the real GitHub account (deploy target: user.github.io root).
+#    If a custom domain is added later, swap the host for that domain here and in sitemap.xml.
+Sitemap: https://USERNAME.github.io/sitemap.xml
