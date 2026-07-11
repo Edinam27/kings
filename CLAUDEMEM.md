@@ -5,18 +5,39 @@
 
 ---
 
-## 0. Snapshot (last updated 2026-07-10)
+## 0. Snapshot (last updated 2026-07-11)
 
-- **Major pivot in progress:** Rebuilding the site as a **Next.js app** with a
-  Vitol-style information architecture (mega-menu dropdowns + deep subpages),
-  a **light, image-forward editorial** aesthetic, and a new **Cormorant Garamond +
-  Inter** type system. This supersedes the v1 static site's dark-luxury direction.
-- **v1 (static HTML/CSS/JS) status:** COMPLETE and **LIVE** at
-  <https://edinam27.github.io/kings/> via GitHub Actions Pages deploy. It stays
-  live until v2 reaches parity, then v2 replaces it.
-- **Active work:** Build plan authored (this doc, §5+). Next action = Phase 0
-  (scaffold the Next.js app). No code written for v2 yet.
-- **Decisions locked (2026-07-10):**
+- **v2 Next.js rebuild is essentially built.** Phases 0–8 are committed; **Phase 9
+  (QA) is in progress** and largely green. The app is a **Next.js 16 (App Router,
+  TS) static export** with Vitol-style IA (mega-menu + deep subpages), a
+  light editorial aesthetic, and the **Cormorant Garamond + Inter** type system.
+- **QA status (2026-07-11):**
+  - **Unit/component (Vitest):** 35 tests pass (11 files).
+  - **Build (static export):** all 39 routes export to `out/` cleanly.
+  - **E2E (Playwright, Chromium):** 43 tests pass (mega-menu, drawer, hero,
+    reduced-motion, every route).
+  - **Lighthouse (local, sim Slow-4G):** A11y 96 · Best-practices 96 · SEO 91 ·
+    **CLS 0 · FCP 0.9s · TBT ~150–210ms** — all strong. **Perf ~70–73, LCP poor
+    (8–13s, noisy)** because the LCP element is the autoplay hero **video**
+    (element-render-delay dominated). This is an accepted design tradeoff; the
+    reliable `lcp-breakdown-insight` puts real subparts near ~2.2s. See §11.
+- **Bugs fixed this session (2026-07-11):**
+  1. **`scripts/lh-audit.mjs` was broken** — it passed both `chromePath` and a
+     fixed `port:9222`, so Lighthouse tried to *connect* to a non-existent Chrome
+     (ECONNREFUSED). Now launches Chrome via **`chrome-launcher`** on a dynamic
+     port and kills it in `finally`. `npm run audit:local` works.
+  2. **basePath asset bug (shipping-blocker):** every raw `/assets/...` URL
+     (`<img>`, `<video>`/`<source>`, `poster`, CSS `url()`, auto-preloads) lacked
+     the `/kings` prefix → **all imagery/video 404s in production.** Added
+     **`lib/asset.ts`** (`asset()` + `BASE_PATH`) and routed every render site
+     through it. Verified: 0 un-prefixed refs, 92 now `/kings/`-prefixed.
+  3. **basePath link bug:** home division grid used raw `<a href={d.href}>`
+     (un-prefixed) → 404 on live. Converted to `next/link`.
+- **v1 (static HTML/CSS/JS):** moved to `legacy/`. **Deploy workflow already
+  builds Next + uploads `out/`**, so the next push to `main` replaces v1 with v2
+  at <https://edinam27.github.io/kings/>. (This is why the basePath asset fix was
+  urgent — the next deploy would otherwise ship 404ing imagery.)
+- **Decisions locked:**
   - Fonts → **Cormorant Garamond** (display serif) + **Inter** (body/UI).
   - Hosting → **GitHub Pages via Next.js static export** (`output: 'export'`,
     `basePath: '/kings'`). Keep the existing repo + Pages setup.
@@ -218,10 +239,38 @@ Cookie policy · Sitemap.
 
 ## 10. Resume Cheatsheet
 
-1. Read §0 (snapshot) + §5 (architecture) + §6 (phases).
-2. If v2 not scaffolded yet → start **Phase 0** (move v1 to `legacy/`, scaffold
-   Next.js, config static export + basePath + fonts).
+1. Read §0 (snapshot) + §11 (QA findings + remaining) first — v2 is built.
+2. Verify gates: `npm run test` (35) · `npm run build` (39 routes) ·
+   `npm run test:e2e` (43) · `npm run audit:local` (Lighthouse).
 3. Fonts = Cormorant Garamond + Inter; host = GitHub Pages static export;
    design = light/editorial, Vitol-structure, original content.
-4. Deploy stays on `.github/workflows/deploy.yml` (update it in Phase 8).
+4. basePath discipline: internal links via `next/link`; **raw assets via
+   `asset()` from `lib/asset.ts`** (never hardcode `/assets/...`).
 5. Keep `.claude/` and `references/` out of git.
+
+---
+
+## 11. Phase 9 QA — findings & remaining work
+
+**Done (2026-07-11):** all test gates green; fixed Lighthouse script + the two
+basePath bugs (see §0). Added `lib/asset.ts` (+ `asset.test.ts`) and
+`fetchPriority="high"` on the reduced-motion hero image.
+
+**Remaining / open:**
+1. **Commit Phase 9 work.** Uncommitted: `lib/asset.ts`, all `*.test.tsx`/`*.test.ts`,
+   `tests/*.spec.ts`, `playwright.config.ts`, `vitest.config.ts`, `vitest.setup.ts`,
+   `scripts/`, re-encoded videos, `app/globals.css`. Suggested: `test:` +
+   `fix(basepath):` + `fix(audit):` commits.
+2. **Deploy pipeline (Phase 8) — CONFIRMED correct.** `.github/workflows/deploy.yml`
+   already runs `npm ci` → `npm run build` → uploads **`out/`**. So the **next push
+   to `main` publishes v2** to `/kings/`. This is exactly why the basePath asset
+   fix mattered — without it the next deploy would have shipped 404ing imagery.
+   Only action left: commit + push (item 1).
+3. **Hero LCP tradeoff.** LCP element = autoplay hero video → Lighthouse perf ~70.
+   Options if a green perf score is required: (a) poster-first with video swapped
+   in post-load, (b) shorter/lighter `oil-rig.mp4` (currently 6.6 MB; `engineers.mp4`
+   13 MB), (c) drop to a static hero image with `fetchpriority=high`. CLS/FCP/TBT
+   already pass — decide with client whether the video is worth the perf hit.
+4. **Coverage target (rules: 80%).** Add `@vitest/coverage-v8` run + threshold if
+   enforcing; current suite covers nav/content/UI/sections but not every page.
+5. **Optional:** visual regression screenshots at 320/768/1024/1440 (rules §web).
