@@ -1,6 +1,8 @@
+import Link from "next/link";
 import Hero from "@/components/sections/Hero";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { asset } from "@/lib/asset";
 
 const divisions = [
   {
@@ -75,16 +77,16 @@ export default function Home() {
                     aspectRatio: "16 / 9",
                     borderRadius: "var(--radius)",
                     marginBottom: "1.1rem",
-                    backgroundImage: `url(${d.img})`,
+                    backgroundImage: `url(${asset(d.img)})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 />
                 <h3>{d.title}</h3>
                 <p>{d.text}</p>
-                <a className="card__more" href={d.href}>
+                <Link className="card__more" href={d.href}>
                   Learn more →
-                </a>
+                </Link>
               </article>
             ))}
           </div>

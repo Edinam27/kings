@@ -3,6 +3,7 @@ import PageHero from "@/components/sections/PageHero";
 import Section from "@/components/sections/Section";
 import CtaBand from "@/components/sections/CtaBand";
 import { articles } from "@/content/articles";
+import { asset } from "@/lib/asset";
 
 export const metadata = {
   title: "Media & insights | Kings Tier Petroleum",
@@ -28,7 +29,7 @@ export default function MediaPage() {
                   aspectRatio: "16 / 9",
                   borderRadius: "var(--radius)",
                   marginBottom: "1.1rem",
-                  backgroundImage: `url(${a.image})`,
+                  backgroundImage: `url(${asset(a.image)})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

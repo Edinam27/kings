@@ -2,6 +2,7 @@ import PageHero from "@/components/sections/PageHero";
 import Section from "@/components/sections/Section";
 import CtaBand from "@/components/sections/CtaBand";
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 export const metadata = {
   title: "What We Do | Kings Tier Petroleum",
@@ -106,7 +107,7 @@ export default function WhatWeDoPage() {
                   aspectRatio: "16 / 9",
                   borderRadius: "var(--radius)",
                   marginBottom: "1.1rem",
-                  backgroundImage: `url(${s.img})`,
+                  backgroundImage: `url(${asset(s.img)})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

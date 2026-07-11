@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import { asset } from "@/lib/asset";
 
 export default function PageHero({
   eyebrow,
@@ -15,7 +16,7 @@ export default function PageHero({
     return (
       <section className="hero" style={{ minHeight: "52svh" }}>
         <div className="hero__media" aria-hidden="true">
-          <img src={image} alt="" />
+          <img src={asset(image)} alt="" />
         </div>
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__inner">

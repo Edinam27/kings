@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
+import { asset } from "@/lib/asset";
 
 export default function Hero() {
   const [reduced, setReduced] = useState(false);
@@ -15,10 +16,10 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__media" aria-hidden="true">
         {reduced ? (
-          <img src="/assets/img/oil-rig.jpg" alt="" />
+          <img src={asset("/assets/img/oil-rig.jpg")} alt="" fetchPriority="high" />
         ) : (
-          <video autoPlay muted loop playsInline poster="/assets/img/oil-rig.jpg">
-            <source src="/assets/video/oil-rig.mp4" type="video/mp4" />
+          <video autoPlay muted loop playsInline poster={asset("/assets/img/oil-rig.jpg")}>
+            <source src={asset("/assets/video/oil-rig.mp4")} type="video/mp4" />
           </video>
         )}
       </div>
