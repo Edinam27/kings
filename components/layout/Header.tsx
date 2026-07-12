@@ -139,7 +139,7 @@ export default function Header() {
                 </div>
               </>
             ) : (
-              <Link className="drawer__link" href={item.href ?? "/"} onClick={() => setDrawerOpen(false)}>
+              <Link className="drawer__link" href={item.href ? item.href : "/"} onClick={() => setDrawerOpen(false)}>
                 {item.label}
               </Link>
             )}
@@ -190,7 +190,7 @@ function NavTrigger({
           </svg>
         </button>
       ) : (
-        <Link className="nav__link" href={item.href ?? "/"}>
+        <Link className="nav__link" href={item.href ? item.href : "/"}>
           {item.label}
         </Link>
       )}
